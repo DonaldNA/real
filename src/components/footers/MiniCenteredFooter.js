@@ -35,17 +35,17 @@ export default () => {
       <Content>
         <Row>
           <LogoContainer>
-            <LogoImg src={logo} />
-            <LogoText>Treact</LogoText>
+            {/* <LogoImg src={logo} /> */}
+            <LogoText>Edith Guzman - Real Broker LLC</LogoText>
           </LogoContainer>
-          <LinksContainer>
+          {/* <LinksContainer>
             <Link href="#">Home</Link>
             <Link href="#">About</Link>
             <Link href="#">Contact Us</Link>
             <Link href="#">Blog</Link>
             <Link href="#">Reviews</Link>
-          </LinksContainer>
-          <SocialLinksContainer>
+          </LinksContainer> */}
+          {/* <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
@@ -55,9 +55,9 @@ export default () => {
             <SocialLink href="https://youtube.com">
               <YoutubeIcon />
             </SocialLink>
-          </SocialLinksContainer>
+          </SocialLinksContainer> */}
           <CopyrightText>
-            &copy; Copyright 2020, Treact Inc. All Rights Reserved.
+            &copy; Copyright 2024, Edith Guzman Realtor. All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>
