@@ -1,16 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "./FullWidthWithImage.js";
 import Features from "../../components/features/ThreeColSimple.js";
 import AboutMe from "../../components/features/TwoColWithButton.js";
 import ContactMe from "../../components/cta/DownloadApp.js";
-// import MainFeature from "components/features/TwoColSingleFeatureWithStats.js";
-// import SliderCard from "components/cards/ThreeColSlider.js";
-// import TrendingCard from "components/cards/TwoTrendingPreviewCardsWithImage.js";
-// import Blog from "components/blogs/PopularAndRecentBlogPosts.js";
-// import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
-// import FAQ from "components/faqs/SimpleWithSideImage.js";
-// import SubscribeNewsLetterForm from "components/forms/SimpleSubscribeNewsletter.js";
 import Footer from "../../components/footers/MiniCenteredFooter.js";
 import emailIcon from '../../images/email-icon.svg'
 import phoneIcon from '../../images/phone-icon.svg'
@@ -39,7 +32,13 @@ const featureCards = [
   }
 ]
 
-export default () => (
+export default () =>{
+  useEffect(() => {
+    window.gtag("js", new Date());
+    window.gtag("config", "G-K0K9VZTF9L");
+  }, [])
+  
+  return(
   <AnimationRevealPage>
     <Hero />
     <Features cards={featureCards}/> 
@@ -85,4 +84,5 @@ export default () => (
     </div>
     <Footer /> 
   </AnimationRevealPage>
-);
+)
+  };
