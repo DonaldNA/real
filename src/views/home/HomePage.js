@@ -12,6 +12,7 @@ import tampaHouse from '../../images/tampa-house-water-cr.jpg'
 import mapLocation from '../../images/map-location.svg'
 import houseSun from '../../images/house-sun.svg'
 import houseWater from '../../images/house-water.svg'
+import {Toggler} from "components/language/Toggler.js";
 
 
 const featureCards = [
