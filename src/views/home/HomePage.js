@@ -53,7 +53,7 @@ export default () =>{
         <br /><br />
         My expertise lies in meticulously analyzing market dynamics and identifying emerging trends. Whether you're seeking your dream home, scouting for an investment property, or aiming to sell, I am dedicated to facilitating a seamless real estate experience for you. With a keen eye for opportunities and a commitment to client satisfaction, I pledge to guide you through every step of your next real estate endeavor.
         <br /><br />
-        Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality. Reach out, and let's begin this exciting journey! This is a test!
+        Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality. Reach out, and let's begin this exciting journey!
         </p>}
         buttonRounded={false} 
         primaryButtonText="Contact Me"
