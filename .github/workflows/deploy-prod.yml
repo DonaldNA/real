@@ -1,0 +1,10 @@
+name: Deploy to Production
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  Deploy-to-s3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ secrets.AWS_SECRET_KEY }} event. ${{ secrets.AWS_ACCESS_KEY }}"
