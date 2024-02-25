@@ -57,7 +57,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer> */}
           <CopyrightText>
-            &copy; Copyright 2024, Edith Guzman Realtor. All Rights Reserved.
+            &copy; Copyright 2024, Edith Guzman Realtor. All Rights Reserved..
           </CopyrightText>
         </Row>
       </Content>
