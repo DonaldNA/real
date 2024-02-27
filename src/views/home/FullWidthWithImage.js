@@ -5,7 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import tampaImg from "../../images/tampa-bay-4215809_1920.jpg"
 
 import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "../../components/headers/light"
-import {Toggler} from "components/language/Toggler";
+import {TogglerBtn} from "components/language/TogglerBtn";
 
 const StyledHeader = styled(Header)`
   ${tw`justify-between`}
@@ -72,7 +72,7 @@ export default ({
       <TwoColumn>
         <LeftColumn>
           <StyledHeader links={navLinks} logoLink="" collapseBreakpointClass="sm" />
-          {/* <Toggler /> */}
+          <TogglerBtn />
           <Content>
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import DualLanguageStr from "components/language/DualLanguageStr.js";
 import Hero from "./FullWidthWithImage.js";
 import Features from "../../components/features/ThreeColSimple.js";
 import AboutMe from "../../components/features/TwoColWithButton.js";
@@ -12,7 +13,6 @@ import tampaHouse from '../../images/tampa-house-water-cr.jpg'
 import mapLocation from '../../images/map-location.svg'
 import houseSun from '../../images/house-sun.svg'
 import houseWater from '../../images/house-water.svg'
-import {Toggler} from "components/language/Toggler.js";
 
 
 const featureCards = [
@@ -43,6 +43,7 @@ export default () =>{
   <AnimationRevealPage>
     <Hero />
     <Features cards={featureCards}/> 
+    <DualLanguageStr />
     <div id="learn-more">
       <AboutMe
         // subheading={<Subheading>Our Vision</Subheading>}

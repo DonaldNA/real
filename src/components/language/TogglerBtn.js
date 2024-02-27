@@ -1,29 +1,27 @@
 import React from 'react'
 
 import { PrimaryButton } from "components/misc/Buttons.js";
-import { toggleLanguage } from 'helpers/toggleLanguage';
+import { toggleLanguage } from 'helpers/language';
 import { useSearchParams } from "react-router-dom";
+import LANGUAGE from 'constants/language';
 
 
-
-export const Toggler = () => {
+// Toggle Query params
+export const TogglerBtn = () => {
   const [, setSearchParams] = useSearchParams({});
 
 
   const setQueryParamLanguage = (e) => {
-    e === 'english' ?
+    e === LANGUAGE.ENGLISH_ABBR ?
     setSearchParams({})
-    : setSearchParams({lang:e})
+    : setSearchParams({[LANGUAGE.QUERY_PARAM]:e})
   }
 
   return (
-    <div>
-      Change your language
       <PrimaryButton
         onClick={() => toggleLanguage(setQueryParamLanguage)}
       >
         This is Button
       </PrimaryButton>
-    </div>
   )
 }
