@@ -80,18 +80,20 @@ export default () =>{
               <br /><br />
               Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality. Reach out, and let's begin this exciting journey!
             </English>
-
+            <Spanish>
+              Mudarme al área de la Bahía de Tampa fue una de las mejores decisiones que tomé, ya que me permitió disfrutar del impresionante clima de la región y de la gran cantidad de actividades al aire libre durante todo el año. Habiendo atravesado el país, afirmo con confianza que la Bahía de Tampa cuenta con el clima más envidiable.
+              <br /><br />
+              Mi experiencia radica en analizar meticulosamente la dinámica del mercado e identificar tendencias emergentes. Ya sea que esté buscando la casa de sus sueños, buscando una propiedad de inversión o intentando venderla, estoy dedicado a facilitarle una experiencia inmobiliaria perfecta. Con un buen ojo para las oportunidades y un compromiso con la satisfacción del cliente, me comprometo a guiarlo en cada paso de su próximo proyecto inmobiliario.
+              <br /><br />
+              Conectemos y exploremos cómo puedo ayudarlo a lograr sus objetivos inmobiliarios. Su visión es mi prioridad y juntos podemos hacerla realidad. ¡Extiende la mano y comencemos este emocionante viaje!
+            </Spanish>
           </DualLanguage>
         }
-        description1={<p>
-        Relocating to the Tampa Bay area was one of the best decisions I've made, allowing me to indulge in the region's stunning weather and plethora of year-round outdoor activities. Having traversed the country, I confidently assert that Tampa Bay boasts the most enviable climate.
-        <br /><br />
-        My expertise lies in meticulously analyzing market dynamics and identifying emerging trends. Whether you're seeking your dream home, scouting for an investment property, or aiming to sell, I am dedicated to facilitating a seamless real estate experience for you. With a keen eye for opportunities and a commitment to client satisfaction, I pledge to guide you through every step of your next real estate endeavor.
-        <br /><br />
-        Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality. Reach out, and let's begin this exciting journey!
-        </p>}
         buttonRounded={false} 
-        primaryButtonText="Contact Me"
+        primaryButtonText={<DualLanguageStr 
+          english="Contact me"
+          spanish="Contáctame"
+        />}
         imageSrc={formalPhoto}
         textOnLeft={false}
         primaryButtonUrl="#contact-me"
@@ -106,9 +108,19 @@ export default () =>{
     <SubscribeNewsLetterForm /> */}
     <div id="contact-me">
       <ContactMe 
-        text={<p>Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality.
-        <br /><br />
-        Reach out, and let's begin this exciting journey!</p>}
+        text={<DualLanguage>
+          <English>
+            Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality.
+            <br /><br />
+            Reach out, and let's begin this exciting journey!
+          </English>
+          <Spanish>
+            Conectemos y exploremos cómo puedo ayudarlo a lograr sus objetivos inmobiliarios. Su visión es mi prioridad y juntos podemos hacerla realidad.
+            <br /><br />
+            ¡Extiende la mano y comencemos este emocionante viaje!
+          </Spanish>
+        </DualLanguage>}
+
         link1Text = "(805) 765-1625"
         link1Url = "tel:805-765-1625"
         link1IconSrc={phoneIcon}
