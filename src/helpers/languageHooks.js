@@ -11,13 +11,20 @@ export const useInitiateLanguage = () => {
 
 export const useGetLanguageQueryParam = () => {
   const [params] = useSearchParams();
-  // console.log('getpar;ams', params)
-  // console.log('getpar;ams', params.get("lang"))
-
   return params.get(LANGUAGE.QUERY_PARAM)
 }
 
 export const useSetLanguageQueryParam = (language) => {
   const [, setSearchParams] = useSearchParams({});
   setSearchParams({[LANGUAGE.QUERY_PARAM]:language})
+}
+
+export const useInEnglish = () => {
+  const language = useGetLanguageQueryParam();
+  return language !== LANGUAGE.SPANISH_ABBR
+}
+
+export const useInSpanish = () => {
+  const language = useGetLanguageQueryParam();
+  return language === LANGUAGE.SPANISH_ABBR
 }

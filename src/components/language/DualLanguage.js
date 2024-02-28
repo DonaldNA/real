@@ -1,11 +1,16 @@
 import React from 'react'
-import { useGetLanguageQueryParam } from 'helpers/languageHooks'
-import LANGUAGE from 'constants/language'
+import { useInEnglish } from 'helpers/languageHooks'
 
 export const DualLanguage = ({children}) => {
-  const val = useGetLanguageQueryParam()
+  const inEnglish = useInEnglish()
 
-  return val === LANGUAGE.SPANISH_ABBR ?
-    <>{children.filter(x => x.type.name === "Spanish")}</> :
-    <>{children.filter(x => x.type.name === "English")}</>
+  if(!Array.isArray(children)){ 
+    if (inEnglish && children.type.name === "English") return children
+    if (!inEnglish && children.type.name === "Spanish") return children
+    return <></>
+  }
+
+  return inEnglish ?
+    <>{children.filter(x => x.type.name === "English")}</> :
+    <>{children.filter(x => x.type.name === "Spanish")}</>
 }

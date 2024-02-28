@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { DualLanguageStr, DualLanguage, English, Spanish } from "components/language"
+import { useInEnglish } from "helpers/languageHooks.js";
 import Hero from "./FullWidthWithImage.js";
 import Features from "../../components/features/ThreeColSimple.js";
 import AboutMe from "../../components/features/TwoColWithButton.js";
@@ -33,7 +34,26 @@ const featureCards = [
   }
 ]
 
+const featureCardsSpanish = [
+  {
+    imageSrc: houseWater,
+    title: "Encontrar un hogar",
+    description: "Conéctate conmigo para encontrar la casa de tus sueños.",
+  },
+  {
+    imageSrc: houseSun,
+    title: "Vende tu casa",
+    description: "Encuentre el comprador adecuado para su casa",
+  },
+  {
+    imageSrc: mapLocation,
+    title: "Trasladarse",
+    description: "Déjame ayudarte a mudarte a Tampa Bay",
+  }
+]
+
 export default () =>{
+  const inEnglish = useInEnglish()
   useEffect(() => {
     window.gtag("js", new Date());
     window.gtag("config", "G-K0K9VZTF9L");
@@ -42,13 +62,28 @@ export default () =>{
   return(
   <AnimationRevealPage>
     <Hero />
-    <Features cards={featureCards}/> 
+    <Features cards={inEnglish ? featureCards : featureCardsSpanish}/> 
     <div id="learn-more">
       <AboutMe
         // subheading={<Subheading>Our Vision</Subheading>}
         // subheading={"Our Vision"}
-        heading="Discover Tampa Bay: Your Key to Real Estate Success Starts Here"
-        description={<p>
+        heading={<DualLanguageStr 
+          english="Discover Tampa Bay: Your Key to Real Estate Success Starts Here"
+          spanish="Descubra Tampa Bay: La Clave Para El Éxito Inmobiliario Comienza Aquí"
+        />}
+        description={
+          <DualLanguage>
+            <English>
+              Relocating to the Tampa Bay area was one of the best decisions I've made, allowing me to indulge in the region's stunning weather and plethora of year-round outdoor activities. Having traversed the country, I confidently assert that Tampa Bay boasts the most enviable climate.
+              <br /><br />
+              My expertise lies in meticulously analyzing market dynamics and identifying emerging trends. Whether you're seeking your dream home, scouting for an investment property, or aiming to sell, I am dedicated to facilitating a seamless real estate experience for you. With a keen eye for opportunities and a commitment to client satisfaction, I pledge to guide you through every step of your next real estate endeavor.
+              <br /><br />
+              Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality. Reach out, and let's begin this exciting journey!
+            </English>
+
+          </DualLanguage>
+        }
+        description1={<p>
         Relocating to the Tampa Bay area was one of the best decisions I've made, allowing me to indulge in the region's stunning weather and plethora of year-round outdoor activities. Having traversed the country, I confidently assert that Tampa Bay boasts the most enviable climate.
         <br /><br />
         My expertise lies in meticulously analyzing market dynamics and identifying emerging trends. Whether you're seeking your dream home, scouting for an investment property, or aiming to sell, I am dedicated to facilitating a seamless real estate experience for you. With a keen eye for opportunities and a commitment to client satisfaction, I pledge to guide you through every step of your next real estate endeavor.
