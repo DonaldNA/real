@@ -8,6 +8,7 @@ import { ContentWithPaddingXl, Container as ContainerBase } from "components/mis
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import appleIconImageSrc from "images/apple-icon.png";
 import googlePlayIconImageSrc from "images/google-play-icon.png"
+import { DualLanguageStr } from "components/language";
 
 const Container = tw(ContainerBase)`bg-gray-900 -mx-8`
 const Content = tw(ContentWithPaddingXl)``
@@ -35,7 +36,10 @@ const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-l
 const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-gray-800 opacity-50`
 const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-gray-800 opacity-50`
 export default ({
-  subheading = "Contact Me",
+  subheading = <DualLanguageStr 
+    english="Contact me"
+    spanish="Contáctame"
+  />,
   text = "Developers all over the world are happily using Treact.",
   link1Text = "App Store",
   link1Url = "http://apple.com",
