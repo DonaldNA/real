@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { PrimaryButton } from "components/misc/Buttons.js";
+import { DualLanguageStr } from './DualLanguageStr';
 import { toggleLanguage } from 'helpers/language';
 import { useSearchParams } from "react-router-dom";
 import LANGUAGE from 'constants/language';
@@ -21,7 +22,11 @@ export const TogglerBtn = () => {
       <PrimaryButton
         onClick={() => toggleLanguage(setQueryParamLanguage)}
       >
-        This is Button
+        {/* English Spanish reversed for reading in opposite language */}
+        <DualLanguageStr 
+          english="Ve en Espanol"
+          spanish="View in English"
+        />
       </PrimaryButton>
   )
 }

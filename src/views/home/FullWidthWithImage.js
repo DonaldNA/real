@@ -3,6 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import tampaImg from "../../images/tampa-bay-4215809_1920.jpg"
+import { DualLanguageStr } from "components/language";
 
 import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "../../components/headers/light"
 import {TogglerBtn} from "components/language/TogglerBtn";
@@ -21,6 +22,8 @@ const NavLink = tw(NavLinkBase)`
 const Container = tw.div`relative -mx-8 -mt-8`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row bg-gray-100`;
 const LeftColumn = tw.div`ml-8 mr-8 xl:pl-10 py-8`;
+
+const ToggleContainer= tw.div`mt-6`;
 
 const RightColumn = styled.div`
   background-image: url(${tampaImg});
@@ -49,30 +52,49 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="tel:805-765-1625">(805) 765-1625</NavLink>
       <NavLink href="mailto:edith@edithguzman.com">edith@edithguzman.com</NavLink>
-      {/* <NavLink href="#">Pricing</NavLink> */}
-      {/* <NavLink href="#">Login</NavLink>  */}
     </NavLinks>
   ],
   heading = (
     <>
-      Unlocking Your Real Estate Dreams
-      <wbr />
+      <DualLanguageStr 
+        english="Unlocking Your Real Estate Dreams"
+        spanish="Liberando Sus Sueños Inmobiliarios"
+      />
+      {/* Unlocking Your Real Estate Dreams */}
       <br />
-      <span tw="text-primary-500">One Property at a Time</span>
+      <span tw="text-primary-500">
+        <DualLanguageStr 
+          english="One Property at a Time"
+          spanish="Una Propiedad a la Vez"
+        />
+      </span>
     </>
   ),
-  description = "Discover why relocating to the Tampa Bay area was my best decision yet, where the sun shines year-round and outdoor adventures await! With my expert insight into market dynamics and unwavering dedication to your real estate success, let's turn your vision into reality together.",
+  description = <DualLanguageStr 
+    english="Discover why relocating to the Tampa Bay area was my best decision yet, where the sun shines year-round and outdoor adventures await! With my expert insight into market dynamics and unwavering dedication to your real estate success, let's turn your vision into reality together."
+    spanish="Descubra por qué mudarme al área de la Bahía de Tampa fue mi mejor decisión hasta ahora, donde el sol brilla todo el año y me esperan aventuras al aire libre. Con mi conocimiento experto de la dinámica del mercado y mi dedicación inquebrantable a su éxito inmobiliario, hagamos realidad su visión juntos."
+  />,
   primaryActionUrl = "#contact-me",
-  primaryActionText = "Connect Now",
+  primaryActionText = <DualLanguageStr 
+    english="Contact Me"
+    spanish="Contáctame"
+  />,
   secondaryActionUrl = "#learn-more",
-  secondaryActionText = "Learn More"
+  secondaryActionText = <DualLanguageStr 
+    english="Learn More"
+    spanish="Aprende más"
+  />,
 }) => {
   return (
     <Container>
       <TwoColumn>
         <LeftColumn>
           <StyledHeader links={navLinks} logoLink="" collapseBreakpointClass="sm" />
-          <TogglerBtn />
+          <div className="mt-8">
+          <ToggleContainer>
+            <TogglerBtn />
+          </ToggleContainer>
+          </div>
           <Content>
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>

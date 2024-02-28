@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import DualLanguageStr from "components/language/DualLanguageStr.js";
+import { DualLanguageStr, DualLanguage, English, Spanish } from "components/language"
 import Hero from "./FullWidthWithImage.js";
 import Features from "../../components/features/ThreeColSimple.js";
 import AboutMe from "../../components/features/TwoColWithButton.js";
@@ -43,7 +43,6 @@ export default () =>{
   <AnimationRevealPage>
     <Hero />
     <Features cards={featureCards}/> 
-    <DualLanguageStr />
     <div id="learn-more">
       <AboutMe
         // subheading={<Subheading>Our Vision</Subheading>}
