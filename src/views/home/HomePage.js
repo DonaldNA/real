@@ -72,7 +72,7 @@ export default () =>{
           spanish="Descubra Tampa Bay: La Clave Para El Éxito Inmobiliario Comienza Aquí"
         />}
         description={
-          <DualLanguage>
+          (<DualLanguage>
             <English>
               Relocating to the Tampa Bay area was one of the best decisions I've made, allowing me to indulge in the region's stunning weather and plethora of year-round outdoor activities. Having traversed the country, I confidently assert that Tampa Bay boasts the most enviable climate.
               <br /><br />
@@ -87,7 +87,7 @@ export default () =>{
               <br /><br />
               Conectemos y exploremos cómo puedo ayudarlo a lograr sus objetivos inmobiliarios. Su visión es mi prioridad y juntos podemos hacerla realidad. ¡Extiende la mano y comencemos este emocionante viaje!
             </Spanish>
-          </DualLanguage>
+          </DualLanguage>)
         }
         buttonRounded={false} 
         primaryButtonText={<DualLanguageStr 
@@ -108,7 +108,7 @@ export default () =>{
     <SubscribeNewsLetterForm /> */}
     <div id="contact-me">
       <ContactMe 
-        text={<DualLanguage>
+        text={(<DualLanguage>
           <English>
             Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality.
             <br /><br />
@@ -119,7 +119,7 @@ export default () =>{
             <br /><br />
             ¡Extiende la mano y comencemos este emocionante viaje!
           </Spanish>
-        </DualLanguage>}
+        </DualLanguage>)}
 
         link1Text = "(805) 765-1625"
         link1Url = "tel:805-765-1625"
