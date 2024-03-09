@@ -107,18 +107,18 @@ export default () =>{
     <SubscribeNewsLetterForm /> */}
     <div id="contact-me">
       <ContactMe 
-        text={<DualLanguage>
-          <English>
+        text={<DualLanguage
+          english={<>
             Let's connect and explore how I can assist you in achieving your real estate goals. Your vision is my priority, and together, we can make it a reality.
             <br /><br />
             Reach out, and let's begin this exciting journey!
-          </English>
-          <Spanish>
+          </>}
+          spanish={<>
             Conectemos y exploremos cómo puedo ayudarlo a lograr sus objetivos inmobiliarios. Su visión es mi prioridad y juntos podemos hacerla realidad.
             <br /><br />
             ¡Extiende la mano y comencemos este emocionante viaje!
-          </Spanish>
-        </DualLanguage>}
+          </>}
+        />}
 
         link1Text = "(805) 765-1625"
         link1Url = "tel:805-765-1625"
