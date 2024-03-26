@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { DualLanguageStr, DualLanguage, English, Spanish } from "components/language"
 import { useInEnglish } from "helpers/languageHooks.js";
+import ContactUsForm from "./ContactUsForm.js";
 import Hero from "./FullWidthWithImage.js";
 import Features from "../../components/features/ThreeColSimple.js";
 import AboutMe from "../../components/features/TwoColWithButton.js";
@@ -97,6 +98,9 @@ export default () =>{
         textOnLeft={false}
         primaryButtonUrl="#contact-me"
       />
+    </div>
+    <div id="contact-us-form">
+      <ContactUsForm />
     </div>
     {/* <SliderCard />
     <TrendingCard />
