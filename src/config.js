@@ -1,0 +1,1 @@
+export const testLambdaURL = 'https://is4fma6mxjoz56ntgopd7ogmfm0sjtll.lambda-url.us-east-1.on.aws/'
